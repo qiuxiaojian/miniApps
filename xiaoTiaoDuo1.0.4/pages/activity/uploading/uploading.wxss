@@ -1,0 +1,13 @@
+
+.btn{
+  display: flex;
+  justify-content: space-around;
+}
+
+button{
+  width: 320rpx;
+  /* margin: 20px; */
+  margin-left: 10rpx;
+  color: #f20686;
+  border: solid 1px #f20686;
+}

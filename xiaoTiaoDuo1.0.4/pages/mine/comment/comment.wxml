@@ -1,0 +1,30 @@
+<view class='title'>
+  课堂评价</view>
+<view class='container'>
+
+  <view class='eva'>
+    <view class='class'>
+      <view>授课老师：{{thisclass.teacher}}</view>
+      <view>课程名称：{{thisclass.course_name}}</view>
+    </view>
+    <view class='score'>评分：
+      <text>{{key}}</text>分</view>
+    <view style='margin:10px;'>
+      <image style="width:30px;height:30px;" src='/images/ketang/nice.png'></image>来给我们的老师打分吧！</view>
+    <view class='stars'>
+      <!--星星评价-->
+      <block wx:for="{{stars}}" wx:key="">
+        <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+          <view class="item1" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+          <view class="item1" style="left:40rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+        </image>
+      </block>
+
+    </view>
+    <button class='eva-t' bindtap='sub_eva'>提交评价</button>
+  </view>
+<view>
+ <text class='score'>你的课堂得分:<text>{{a?'':'null'}}</text></text> 
+</view>
+
+</view>

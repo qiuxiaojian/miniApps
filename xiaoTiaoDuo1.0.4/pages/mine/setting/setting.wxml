@@ -1,0 +1,5 @@
+<!--pages/setting/setting.wxml-->
+<view class='box'>
+  <text class='text'>屏蔽消息提醒</text>
+  <switch checked bindchange="switch1Change" color=" #f20686" class='switch'></switch>
+</view>

@@ -1,0 +1,20 @@
+
+<template name="post_box">
+
+      <view class='show_list' >
+      <view class='show_box' data-index='{{index}}' bindtap='onShowVideo'>
+        <view class='show_img'>
+          <image src="{{poster}}"></image>
+        </view>
+        <view class='show_content'>
+          <text class='show_tit'>{{className}}</text>
+          <text>作者：{{name}}</text>
+          <text>来源机构：{{source}}</text>
+          <text>点赞人数：{{zan_name.length}}</text>
+          <text>发布时间：{{time}}</text>
+        </view>
+        <view class='hr'></view>
+      </view>
+    </view> 
+
+</template>

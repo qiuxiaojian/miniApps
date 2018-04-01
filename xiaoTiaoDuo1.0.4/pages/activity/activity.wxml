@@ -1,0 +1,107 @@
+<!-- <view>
+
+  <swiper class='index_swiper' autoplay='true' interval='2000' indicator-dots='{{false}}' vertical='true'>
+    <block wx:for="{{imgUrls}}" wx:key="">
+      <swiper-item>
+        <image src='{{item}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <view class='theme'>
+    <text class='title'>课堂学习</text>
+    <view class='item'  catchtap='onIdeaTap'>
+      <image src='/images/news/1.jpg'></image>
+      <text class='idea'>感想发表</text>
+    </view>
+    <view class='item'>
+      <image src='/images/news/2.jpg'></image>
+      <text class='idea'>图片视频上传</text>
+    </view>
+    <view class='item'>
+      <image src='/images/news/3.jpg'></image>
+      <text class='idea'>评论</text>
+    </view>
+    <view class='clearfloat'></view>
+  </view>
+  <view class='theme'>
+    <text class='title'>课外活动</text>
+    <view class='item'>
+      <image src='/images/news/1.jpg'></image>
+      <text class='idea'>感想发表</text>
+    </view>
+    <view class='item'>
+      <image src='/images/news/2.jpg'></image>
+      <text class='idea'>课堂点评</text>
+    </view>
+    <view class='item'>
+      <image src='/images/news/3.jpg'></image>
+      <text class='idea'>课堂得分</text>
+    </view>
+     <view class='item'>
+      <image src='/images/news/3.jpg'></image>
+      <text class='idea'>科目选择</text>
+    </view>
+    <view class='clearfloat'></view>
+  </view>
+
+</view>  -->
+
+<view class='act_container'>
+  <view class='header'>
+    <image class='img' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522414636471&di=b3a5ebfdee82105b9d8033502c044cc8&imgtype=0&src=http%3A%2F%2Fwww.rui2.net%2Fuploadfile%2Foutput%2Fae%2F2015%2F0527%2F3f21ca12ff6fd387.jpg'></image>
+    <image bindtap='publish_info' class='friend1' src='/images/friend1.png'></image>
+    <view>
+      <image class='friend2' src='/images/share-it.png'></image>
+      <text class='friend3'>点击这里可以参分享哦~</text>
+    </view>
+
+  </view>
+
+  <view class='content'>
+
+    <view class='theme'>
+      <view class="classroom {{substance?'':'theme_color'}}" bindtap='onClassTap'>
+        <text>课堂学习</text>
+      </view>
+      <view class="keWai {{substance?'theme_color':''}}" bindtap='onKewaiTap'>
+        <text>课外活动</text>
+      </view>
+
+    </view>
+
+    <view class="classroom_content detail {{substance?'':'activity'}}">
+      <!-- <text>ketan</text> -->
+      <!-- <view class='list' bindtap='publish_info'>感想发表</view> -->
+      <!-- <view class='list' bindtap='comment'  >课堂点评</view>
+      <view class='list' bindtap='score'>课堂得分</view>  -->
+      <!-- <view class='list' bindtap='uploading'>图片视频上传</view> -->
+      <view class='list enter'>
+        <text>（课堂）\n指纹识别进入 \n Alisa圈</text>
+      </view>
+    </view>
+
+    <view class="keWai_content detail {{substance?'activity':''}}">
+      <!-- <view class='list'>感想发表</view> -->
+      <view class='list enter'>
+        <text>（课外）\n指纹识别进入 \n Alisa圈</text>
+      </view>
+      <!-- <view class='list'>图片视频上传</view>
+      <view class='list'>查看/评论</view> -->
+    </view>
+    <view class='zhiwen1'>
+      <view class='zhiwen' bindlongtap='onJieTap' bindtouchend='onJieEndTap'>
+         <image   class="jie1 {{showFingerprint?'hidden':'show'}}" src='/images/jie.svg'></image> 
+        <image class="jie2 {{showFingerprint?'show':'hidden'}}" src='/images/jie2.svg'></image>
+      </view>
+    </view>
+    <!-- 发表感想 -->
+    <view class='hr'></view>
+  </view>
+
+
+  <!-- 自定义模型 -->
+
+
+</view>
