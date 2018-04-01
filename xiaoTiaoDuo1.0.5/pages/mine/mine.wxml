@@ -1,0 +1,36 @@
+<view class='bgimg'>
+  <view class='meC'>
+    <image  src='{{userInfoAvatar}}' class='meimg'></image>
+    <text class='mename'>{{nickName}}</text>
+    <!-- <text class='more' bindtap='more'>更多</text> -->
+  </view>
+  <view class='mem'> 
+    <view class='mem_l1' bindtap='mystudy'>
+      <image class='mem_li1' src='/images/pto.png'></image>
+      <text class='mem_lt'>我的学习</text>
+      <image  class='mem_li2' src='/images/to.png'></image>
+    </view>
+
+    <view class='mem_l2' bindtap='mymessages'>
+      <image class='mem_li1' src='/images/star2.png'></image>
+      <text class='mem_lt'>消息通知</text><view class='d {{show?"":"hide"}}'>{{num}}</view>
+      <image  class='mem_li2' src='/images/to.png'></image>
+    </view>
+
+    <view class='mem_l3' bindtap='mineinfo'>
+      <image class='mem_li1' src='/images/me.png'></image>
+      <text class='mem_lt'>我的信息</text>
+      <image  class='mem_li2' src='/images/to.png'></image>
+    </view>
+    <view class='mem_l4' bindtap='opinion'>
+      <image class='mem_li1' src='/images/opinion3.png'></image>
+      <text class='mem_lt'>意见反馈</text>
+      <image  class='mem_li2' src='/images/to.png'></image>
+    </view>
+    <view class='mem_l5' bindtap='setting'>
+      <image class='mem_li1' src='/images/setting.png'></image>
+      <text class='mem_lt'>设置</text>
+      <image  class='mem_li2' src='/images/to.png'></image>
+    </view>
+  </view>
+</view>

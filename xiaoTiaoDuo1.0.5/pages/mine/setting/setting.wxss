@@ -1,0 +1,16 @@
+/* pages/setting/setting.wxss */
+.box{
+  width: 90%;
+  margin: 5%;
+  height: 30px;
+  line-height: 30px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #aaa;
+}
+.switch{
+  float: right;
+}
+.text{
+  font-family: "仿宋";
+  font-weight: bold;
+}

@@ -1,0 +1,75 @@
+<!--pages/ketang/chatinfo/chatinfo.wxml-->
+<view id="adduser">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <view class="section__title">姓名:</view>
+      <view class='form-group'>
+        <input readonly type="text" class="input-text" name="author" value="{{userInfo.nickName}}" />
+      </view>
+    </view>
+    <view>
+      <input type='text' name="img_mark" value='{{random}}'></input>
+    </view>
+    <view class='section'>
+      <view>
+        <textarea type='text' class='input-text textarea' name="content" placeholder='课堂感想~'></textarea>
+      </view>
+    </view>
+
+    <view style='margin:20px;'>
+      <view>{{tip}}</view>
+      <view class='upload-image' style='float:right;'>
+        <!-- <button class='btn' formType="submit" class='loadbtn'>发布</button>    -->
+        <!-- <image src='../../img/add_a_photo.png' style='width:30px;height:20px;'></image>
+            <text style='color: indigo;font-size:16px;'>\n上传</text> -->
+      </view>
+      <view class="images">
+        <view class="images-uploader">
+          <view class="images-uploader__files">
+            <!-- 遍历图片显示 -->
+            <block wx:for="{{img_arr}}" wx:key="">
+              <view class="images-uploader__file">
+                <image class="images-uploader__img" src="{{item}}" bindtap='onViewTap' data-index="{{index}}"></image>
+              </view>
+            </block>
+            <!-- 遍历视频显示 -->
+       
+              <view class="images-uploader__file" wx:if="{{videoPath.length>0}}">
+               <block wx:for="{{videoPath}}" wx:key="">
+              <view class="images-uploader__file">
+                  <image src='/images/movie.png' class="images-uploader__img" data-index="{{index}}"></image>
+              </view>
+            </block>
+                <!-- <image src='/images/movie.png' class="images-uploader__img" data-index="{{index}}"></image> -->
+              </view>
+  
+
+
+          </view>
+          <view class="images-uploader__input-box" bindtap="upimg">
+            <!-- <view class="images-uploader__input" bindtap="upimg"></view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="section">
+      <button formType="submit" class='btn-area loadbtn' bindtap='submit'>提交</button>
+      <!-- <button formType="reset" class='btn-area'>清空</button>   -->
+    </view>
+  </form>
+
+  <!-- 黑框提示并消失 -->
+  <!-- <toast hidden="{{toast1Hidden}}" bindchange="toast1Change">  
+        {{notice_str}}  
+    </toast>   -->
+  <!-- 确认框 及 提示框 -->
+  <!-- <view class="page__bd">  
+        <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm_one" bindcancel="cancel_one">  
+            确认提交么？  
+        </modal>  
+        <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">  
+            <view> 提示 </view>  
+            <view> 清空成功 </view>  
+        </modal>  
+    </view>   -->
+</view>

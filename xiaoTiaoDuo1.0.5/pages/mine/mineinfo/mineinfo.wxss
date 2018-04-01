@@ -1,0 +1,74 @@
+/* pages/me/function/mineinfo.wxss */
+page{
+  height: 100%;
+  
+}
+.conta{
+  background-image: url('https://www.alisadance.cn/static/lapp/infobgimg.jpg');
+  display: block;
+  width: 100%;
+  /* height: 650px; */
+  height: 100%;
+  background-size: contain;
+  position: relative; 
+}
+.posi{
+  position: fixed;
+  top: 23.3%; 
+  text-align: center;
+  display: block;
+  width: 100%;
+  /* height: 650px; */
+  height: 100%;
+  color: pink;
+}
+
+
+.li{
+  position: relative;
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  height: 40px;
+  border-top: solid 1px #eee;
+  line-height: 40px;
+}
+.title{
+  margin-left: 30px;
+}
+.meimg{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top:8px;
+  right: 6%;
+}
+.info{
+  position: absolute;
+  right: 6%;
+  font-weight: normal;
+}
+.mem_li2{
+  position: absolute;
+  top: 10px;
+  right: 6%;
+  /* float: right; */
+  height: 18px;
+  width: 18px;
+  display: block;
+  border-right: 32px solid transparent;
+  -webkit-filter:drop-shadow(32px 0 #000);
+  filter:drop-shadow(32px 0 #000);
+}
+
+/*注销退出*/
+.cancel{
+  text-align: center;
+  background: #f20686;
+  width: 90%;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  margin: 40px 5% 10px 5%;
+}

@@ -1,0 +1,37 @@
+ <import  src='class/post_box-template.wxml' /> 
+
+ <!-- //video对滚动事件造成干扰 -->
+  <view class='show_video' style="display:{{show}};top:{{video_top}}" >
+     <video  id='otherVideo'  src='{{video_url}}'></video> 
+  </view> 
+
+<scroll-view scroll-y="true" bindscroll="scrollTopFun"   style="height: 1334rpx;">
+
+<view>
+  <view class='head'>
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text class='txt'>欢迎,{{userInfo.nickName}}</text>
+  </view>
+
+  <swiper class='index_swiper' autoplay='true' interval='2000' indicator-dots='true'>
+    <block wx:for="{{imgUrls}}" wx:key="">
+      <swiper-item>
+        <image src='{{item}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='floortitle'>
+    <view class='floortitlemoreicon'>本周最火</view>
+    <view class='floortitlemoretext' bindtap="goToMore">更多> </view>
+  </view>
+
+  <block wx:for="{{postList}}" wx:key="" data-index="{{index}}">
+
+ <template is="post_box"  data="{{...item,index}}"/> 
+
+  </block>
+
+
+</view>
+</scroll-view>

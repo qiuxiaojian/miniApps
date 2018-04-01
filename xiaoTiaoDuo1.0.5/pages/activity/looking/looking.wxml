@@ -1,0 +1,100 @@
+<view class='container_look' bindtap='onScreenTap'>
+  <view class="bigImg" bindtap=''>
+    <view class="{{mineinfo.identity=='游客'? 'hidden':''}}">
+      <image class='friend' src='/images/friend1.png' bindtap="showModalEvent"></image>
+    </view>
+    <image src='http://p3kkiwyka.bkt.clouddn.com/4.jpeg' class='Img'></image>
+    <view class="userAva">
+      <text class="userName">{{nickName}}</text>
+      <image src="{{userInfoAvatar}}"></image>
+    </view>
+  </view>
+  <text style='margin:10px;color:#f20686;'>主人,点击右上角你也可以发表感想哦</text>
+  <!-- 评论区 -->
+  <block wx:for="{{postList}}" wx:key="">
+    <view class='com_container' data-index="{{index}}" bindtap='onContainerTap'>
+      <view class='avatar'>
+        <image src='{{item.portrait}}'></image>
+      </view>
+
+      <view class='info'>
+        <view class='info_name'>
+          <text>{{item.name}}</text>
+        </view>
+        <view>
+          <text>{{item.content}}</text>
+        </view>
+
+        <!-- 媒体区 -->
+        <view class='medis'>
+          <!-- 图片展示区 -->
+          <view wx:if="{{item.imgSrc}}" class='img_content1'>
+            <block wx:for="{{item.imgSrc}}" wx:key="">
+              <view class='img_content'>
+                <image src='{{item}}' bindtap='onComPreTap' data-index='{{index}}'></image>
+                <!-- <text>{{t}}</text> -->
+              </view>
+            </block>
+          </view>
+          <!-- 视频展示 -->
+          <view   wx:if="{{item.videoSrc}}" class='img_content1'>
+            <block wx:for="{{item.videoSrc}}" wx:key="">
+                <view class='img_content'> 
+                <video src='{{item}}' ></video>
+               </view>  
+            </block>
+          </view>
+        </view>
+        <!-- 媒体区 end-->
+
+        <view class='time1'>
+          <view class='time'>
+            <text>{{item.time}}</text>
+            <image bindtap='onComTap' src='/images/icon.png' data-index="{{index}}"></image>
+          </view>
+
+          <view class="zan {{item.form?'':'hidden'}}">
+            <view class='zanv1' bindtap='onZanTap' data-index="{{index}}">
+              <image src='/images/zan.png' style='height:28px;width:28px;margin-left:5px;'></image>
+              <text class='zan1'>{{zan_txt?'取消':'赞'}}</text>
+            </view>
+            <view class='zanv2' bindtap='onPingTap' data-index='{{index}}' id='{{}}'>
+              <image src='/images/comm.png' class='comm'></image>
+              <text class='zan1'>评论</text>
+            </view>
+          </view>
+        </view>
+
+        <view class='other_zan'>
+          <image wx:if="{{item.zan_name}}" src='/images/ding.png'></image>
+          <block wx:for="{{item.zan_name}}" wx:key="" wx:for-item="i">
+            <text>{{i}}</text>
+          </block>
+        </view>
+        <view class='other_comment'>
+
+          <block wx:for="{{item.commentList}}" wx:key="" wx:for-item="e">
+            <view class='other_box' bindtap='onComDelTap' data-index="{{index}}">
+
+              <text wx:if="{{e.other_name.length>1}}"><text  class='other_name'>{{e.other_name[0]}}</text>回复<text  class='other_name'>{{e.other_name[1]}}:</text></text>
+              
+              <text wx:else class='other_name'>{{e.other_name}}:</text>
+              <text class='other_txt'>{{e.other_content}}</text>
+            
+            </view>
+          </block>
+        </view>
+<!-- {{item.ping?'':'hidden'}} -->
+<!-- 一级评论 -->
+        <input   data-index='{{index}}' class="com_form {{item.focus?'':'hidden'}} " value='{{com}}' name="input" type='text' placeholder='发下评论~' focus="{{item.focus}}"   bindconfirm="sub"  bindblur="onBlurTap" ></input>
+
+        <!-- 二级评论 -->
+        <input  data-index='{{index}}' placeholder="回复{{transit_name}}~" value='{{com}}' bindconfirm="sub1"  focus="{{item.two_ping}}" bindblur="onBlurTap1" class=" {{item.two_ping?'':'hidden'}}"></input>
+        
+      </view>
+    </view>
+  </block>
+  <!-- 评论end -->
+
+
+</view>

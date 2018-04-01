@@ -1,0 +1,11 @@
+<!--pages/me/function/opinion.wxml-->
+<view class='txt'>
+欢迎来访Alisa舞蹈，问题与意见反馈可进入我们的公众号联系我们。以便我们为您提供更好的帮助，谢谢！
+</view>
+<view class='img'><image src='/images/Alisa.jpg'></image></view>
+
+<view class='line'></view>
+<view class='kf'>
+  <contact-button size="20" session-from="weapp"></contact-button>
+  <view>联系客服</view>
+</view>

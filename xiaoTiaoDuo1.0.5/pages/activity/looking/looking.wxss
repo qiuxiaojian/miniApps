@@ -1,0 +1,165 @@
+.hidden {
+  display: none;
+}
+.container_look{
+  /* margin-bottom: 300px; */
+  /* padding-bottom: 850rpx; */
+}
+.bigImg {
+  width: 100%;
+  /* height: 40%; *//* background: url("../../images/bottomNav/moments_bg.jpg");  */
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.friend {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+}
+
+.bigImg .Img {
+  width: 100%;
+  height: 130px;
+}
+
+.bigImg .userName {
+  font-size: 20px;
+  margin: 10px;
+  color: #fff;
+}
+
+.userAva {
+  position: absolute;
+  right: 50rpx;
+  bottom: 10px;
+}
+
+.userAva image {
+  position: relative;
+  width: 140rpx;
+  height: 140rpx;
+  right: 0;
+  bottom: -50rpx;
+  border: 1px #fff solid;
+}
+
+.userAva text {
+  color: white;
+}
+
+/* 评论区 */
+
+.com_container {
+  display: flex;
+  flex-flow: row nowrap;
+  /* justify-content: space-around; */
+   margin-left: 10px; 
+  margin-top: 15px;
+  margin-bottom: 10%;
+  /* border-bottom: 1px gray solid; */
+}
+
+
+.avatar image {
+  width: 30px;
+  height: 30px;
+}
+
+.info {
+  margin-left: 15px;
+  display: flex;
+  width: 90%;
+  flex-flow: column nowrap;
+}
+ .medis{ 
+   display: flex; 
+   flex-flow: row wrap; 
+ } 
+.img_content1{
+width: 100%;
+/* height: 1000rpx; */
+display: flex;
+flex-flow: row nowrap;
+}
+.img_content{
+  width: 100%;
+  /* margin-right: 15px; */
+  margin-right: 15px;
+}
+.img_content image ,.img_content video{
+width: 100%;
+height: 350rpx;
+}
+.time {
+  color: gray;
+  width: 100%;
+  /* margin-top: 10px; */
+  font-size: 15px;
+  /* position: relative; */
+  position: relative;
+}
+.time1{
+  position: relative;
+}
+.time image {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  /* margin-left: 200rpx; */
+}
+
+.other_zan image {
+  width: 20px;
+  height: 20px;
+}
+.other_zan text{
+margin-left: 8px;
+font-size: 17px;
+}
+.other_box{
+  font-size: 17px;
+}
+.com_form{
+  /* border: 1px #666 solid; */
+  border-radius: 5px;
+
+}
+.other_name,.info_name,.zan,.other_zan text{
+  color: blue;
+}
+.zan{
+  position: absolute;
+  top: 6px;
+  right: 30px;
+  height: 32px;
+   width: 170px; 
+  background-color: #393A3F; 
+  /* display: none; */
+  opacity: .8;
+}
+.zanv1{
+  float: left;
+  width: 75px;
+}
+.zanv2{
+  float: right;
+  width: 80px;
+}
+.zan1{
+  color:#fff;font-size:18px;
+   margin-left:5px; 
+   position: absolute; 
+   margin-top: 2px; 
+}
+.comm{
+   /* margin-top: 2px; */
+  height: 28px;
+  width: 28px;
+  /* margin-left:5px;  */
+}
